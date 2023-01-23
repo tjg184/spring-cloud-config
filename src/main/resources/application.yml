@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: awss3
+  cloud:
+    config:
+      server:
+        awss3:
+          bucket: bucket1
+          region: us-east-1
+          endpoint: http://localhost:9000
+          order: 1
+        git:
+          uri: https://github.com/tjg184/spring-cloud-config-data.git
+          default-label: master
+          clone-on-start: true
+          order: 2
